@@ -30,8 +30,7 @@ server:
 
 catalogo:
   importer:
-    base-url: ${IMPORTER_BASE_URL:https://raw.githubusercontent.com}
-    path: ${IMPORTER_PATH:/acavallo-a7/catalogo-prodotti-json/main/dati/catalogo_prodotti.json}
+    url: https://raw.githubusercontent.com/acavallo-a7/catalogo-prodotti-json/main/dati/catalogo_prodotti.json
 
 springdoc:
   api-docs:

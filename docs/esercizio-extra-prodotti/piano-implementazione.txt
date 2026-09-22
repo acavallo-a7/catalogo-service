@@ -1,0 +1,102 @@
+Piano implementazione — catalogo-service
+==========================================
+Riferimento: traccia.txt, README.md (sezione "Piano di costruzione")
+
+[x] S0 — Setup progetto
+    Spring Initializr: Java 21, Spring Boot 4.1.1.
+    Dipendenze: Web, Data JPA, Validation, Lombok, PostgreSQL Driver.
+    Aggiunte a mano: Flyway, RestClient, springdoc-openapi.
+
+[x] S1 — Entity di dominio
+    Package domain.
+    Categoria: id, prefisso (nullable, univoco), nome (univoco).
+    Prodotto: id, nome, sku (univoco), prezzo, disponibile, produttore,
+    ean (nullable), relazione @ManyToOne verso Categoria (obbligatoria).
+
+[x] S2 — Migrazioni Flyway
+    V1__categorie.sql: tabella categorie + insert 7 categorie note +
+    "Non Categorizzato" (prefisso NULL).
+    V2__prodotti.sql: tabella prodotti, FK categoria_id, UNIQUE su sku.
+
+[ ] S3 — Repository Spring Data JPA
+    Package repository.
+    CategoriaRepository: findByPrefisso(String prefisso).
+    ProdottoRepository: findBySku(String sku), findByCategoriaId(Long id)
+    (query derivata "prodotti per categoria").
+
+[ ] S4 — DTO di confine + client HTTP import JSON
+    Package client.
+    Record ProdottoJson con @JsonIgnoreProperties(ignoreUnknown = true) e
+    @JsonProperty per ogni campo (nome_prodotto, codice_sku, prezzo_listino,
+    disponibile, produttore, codice_ean). NON mappare ultima_modifica_interna.
+    Client RestClient (o Feign) verso catalogo.importer.base-url + path.
+    Attenzione trappola: radice JSON e' oggetto, non array —
+    Map<String, ProdottoJson>, con ParameterizedTypeReference se RestClient.
+
+[ ] S5 — ImporterService
+    Package service.
+    Deriva categoria dal prefisso di sku (prime 2 lettere prima delle cifre).
+    Sku non mappabile a nessun prefisso noto -> scartato, ECCETTO
+    "PROMO-OMAGGIO" che va sempre in "Non Categorizzato".
+    Idempotenza: se sku gia' presente in DB, non reinserire (vale anche per
+    PROMO-OMAGGIO). Basarsi sul vincolo UNIQUE di sku, non su un controllo
+    applicativo separato.
+    Output: conteggio inseriti / scartati (sku non valorizzato o non
+    mappabile) / gia' presenti.
+
+[ ] S6 — DTO di risposta + mapper
+    CategoriaResponse, ProdottoResponse (con nome categoria incluso),
+    ImportResult (inseriti, scartati, gia_presenti).
+
+[ ] S7 — Controller REST
+    Package web.
+    POST   /import
+    GET    /categorie
+    GET    /categorie/{id}
+    GET    /categorie/{id}/prodotti
+    GET    /prodotti           (con dati completi + nome categoria)
+    GET    /prodotti/{id}
+    Non obbligatori: PUT/DELETE/POST manuale su categoria e prodotto.
+
+[ ] S8 — Validazione + gestione errori centralizzata
+    Validazione input (Bean Validation su path/query/body dove serve).
+    @RestControllerAdvice con ProblemDetail per: 404 (notfound),
+    400 (badrequest/validation), 409 (conflitto).
+
+[ ] S9 — OpenAPI / Swagger
+    Verifica springdoc attivo: /v3/api-docs, /swagger-ui.html.
+    Documentare parametri path/query e risposte di errore (400/404/409).
+
+[ ] S10 — Containerizzazione
+    Dockerfile multi-stage (gia' presente, da verificare a build reale).
+    .dockerignore (gia' presente).
+    docker-compose.yaml: postgres + servizio, con healthcheck.
+
+    Correzioni da fare PRIMA di testare S10 (bug trovati in revisione):
+    - Allineare nome DB: docker-compose usa "catalogodb",
+      application.yaml usa "catalogo_db" — deve essere lo stesso ovunque.
+    - Allineare porta: application.yaml locale punta a localhost:5436,
+      docker-compose espone "5432:5432" — probabile fix: "5436:5432".
+    - Actuator: application.yaml espone management.endpoints (health,info)
+      e docker-compose fa healthcheck su /actuator/health, ma pom.xml non
+      ha spring-boot-starter-actuator — aggiungere dipendenza o rimuovere
+      entrambi i blocchi.
+    - logging.level in application.yaml punta a "it.linksmt.corsi.catalogo"
+      (package sbagliato, leftover) — correggere in
+      "it.its.catalogoservice".
+
+[ ] S11 — Push finale su GitHub
+    Repo gia' creato e pushato: https://github.com/acavallo-a7/catalogo-service
+    Verificare che il JSON dati (catalogo_prodotti.json) sia pubblicato in
+    un repo GitHub pubblico separato, con URL raw funzionante, e che
+    catalogo.importer.base-url + path in application.yaml puntino li'.
+
+Verifica finale
+================
+- Avvio con docker-compose up: postgres healthy, poi servizio healthy.
+- POST /import due volte di seguito: seconda volta 0 inseriti, tutti
+  "gia' presenti" (idempotenza, incluso PROMO-OMAGGIO).
+- GET /categorie, /categorie/{id}, /prodotti, /prodotti/{id},
+  /categorie/{id}/prodotti rispondono coerenti.
+- Errori: id inesistente -> 404, input non valido -> 400.
+- Swagger UI raggiungibile e documentazione completa.
