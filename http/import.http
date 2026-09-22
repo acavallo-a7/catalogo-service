@@ -1,0 +1,14 @@
+### catalogo-service — import prodotti
+@host = http://localhost:8080
+
+### Lancia l'importer: scarica il JSON esterno, popola prodotti/categorie.
+### Risposta attesa: EsitoImport{scartati, inseriti, giaPresenti}.
+### Scartati attesi: 2 (sku "ZZ0001" e "9999", prefisso non mappabile).
+POST {{host}}/import
+
+
+### Rilanciato una seconda volta: idempotenza.
+### Attesi: inseriti 0, giaPresenti = quelli inseriti al giro precedente,
+### scartati sempre gli stessi 2 (incluso il caso PROMO-OMAGGIO, che non
+### deve duplicarsi).
+POST {{host}}/import
