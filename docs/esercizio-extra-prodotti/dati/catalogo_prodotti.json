@@ -1,0 +1,974 @@
+{
+  "9999": {
+    "nome_prodotto": "Prodotto Senza Codice Valido",
+    "codice_sku": "9999",
+    "prezzo_listino": 3,
+    "disponibile": false,
+    "produttore": "N/D",
+    "codice_ean": null,
+    "ultima_modifica_interna": "2018-06-01"
+  },
+  "EL0001": {
+    "nome_prodotto": "Smartphone 6.5\" 128GB",
+    "codice_sku": "EL0001",
+    "prezzo_listino": 128.12,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": null
+  },
+  "EL0002": {
+    "nome_prodotto": "Cuffie Bluetooth Over-Ear",
+    "codice_sku": "EL0002",
+    "prezzo_listino": 288.22,
+    "disponibile": false,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000001"
+  },
+  "EL0003": {
+    "nome_prodotto": "Caricabatterie USB-C 65W",
+    "codice_sku": "EL0003",
+    "prezzo_listino": 274.24,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000002"
+  },
+  "EL0004": {
+    "nome_prodotto": "Tablet 10\" 64GB",
+    "codice_sku": "EL0004",
+    "prezzo_listino": 61.4,
+    "disponibile": true,
+    "produttore": "Solaris",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": null
+  },
+  "EL0005": {
+    "nome_prodotto": "Smartwatch Fitness",
+    "codice_sku": "EL0005",
+    "prezzo_listino": 105.48,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000004"
+  },
+  "EL0006": {
+    "nome_prodotto": "Power Bank 20000mAh",
+    "codice_sku": "EL0006",
+    "prezzo_listino": 49.83,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000005"
+  },
+  "EL0007": {
+    "nome_prodotto": "Mouse Wireless",
+    "codice_sku": "EL0007",
+    "prezzo_listino": 159.59,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": null
+  },
+  "EL0008": {
+    "nome_prodotto": "Tastiera Meccanica RGB",
+    "codice_sku": "EL0008",
+    "prezzo_listino": 35.65,
+    "disponibile": true,
+    "produttore": "Solaris",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000007"
+  },
+  "EL0009": {
+    "nome_prodotto": "Webcam Full HD",
+    "codice_sku": "EL0009",
+    "prezzo_listino": 288.42,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000008"
+  },
+  "EL0010": {
+    "nome_prodotto": "Speaker Bluetooth Portatile",
+    "codice_sku": "EL0010",
+    "prezzo_listino": 61.39,
+    "disponibile": true,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": null
+  },
+  "EL0011": {
+    "nome_prodotto": "Router Wi-Fi 6",
+    "codice_sku": "EL0011",
+    "prezzo_listino": 115.99,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000010"
+  },
+  "EL0012": {
+    "nome_prodotto": "Hard Disk Esterno 2TB",
+    "codice_sku": "EL0012",
+    "prezzo_listino": 103.78,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-02-15",
+    "codice_ean": "801000000011"
+  },
+  "EL0013": {
+    "nome_prodotto": "Lampada LED da Scrivania",
+    "codice_sku": "EL0013",
+    "prezzo_listino": 160.35,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": null
+  },
+  "EL0014": {
+    "nome_prodotto": "Monitor 27\" 4K",
+    "codice_sku": "EL0014",
+    "prezzo_listino": 280.17,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000013"
+  },
+  "EL0015": {
+    "nome_prodotto": "Stampante Multifunzione",
+    "codice_sku": "EL0015",
+    "prezzo_listino": 233.61,
+    "disponibile": true,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000014"
+  },
+  "AB0001": {
+    "nome_prodotto": "Maglietta Cotone Girocollo",
+    "codice_sku": "AB0001",
+    "prezzo_listino": 27.39,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": null
+  },
+  "AB0002": {
+    "nome_prodotto": "Felpa con Cappuccio",
+    "codice_sku": "AB0002",
+    "prezzo_listino": 91.4,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000016"
+  },
+  "AB0003": {
+    "nome_prodotto": "Jeans Slim Fit",
+    "codice_sku": "AB0003",
+    "prezzo_listino": 13.48,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000017"
+  },
+  "AB0004": {
+    "nome_prodotto": "Giacca a Vento Impermeabile",
+    "codice_sku": "AB0004",
+    "prezzo_listino": 60.18,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": null
+  },
+  "AB0005": {
+    "nome_prodotto": "Scarpe da Ginnastica",
+    "codice_sku": "AB0005",
+    "prezzo_listino": 125.34,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000019"
+  },
+  "AB0006": {
+    "nome_prodotto": "Calzini Sportivi Pack 3",
+    "codice_sku": "AB0006",
+    "prezzo_listino": 7.11,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000020"
+  },
+  "AB0007": {
+    "nome_prodotto": "Cappello Invernale",
+    "codice_sku": "AB0007",
+    "prezzo_listino": 75.63,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": null
+  },
+  "AB0008": {
+    "nome_prodotto": "Sciarpa di Lana",
+    "codice_sku": "AB0008",
+    "prezzo_listino": 178.84,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000022"
+  },
+  "AB0009": {
+    "nome_prodotto": "Guanti Termici",
+    "codice_sku": "AB0009",
+    "prezzo_listino": 82.11,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000023"
+  },
+  "AB0010": {
+    "nome_prodotto": "Pantaloncini Sportivi",
+    "codice_sku": "AB0010",
+    "prezzo_listino": 108.76,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": null
+  },
+  "AB0011": {
+    "nome_prodotto": "Camicia Formale",
+    "codice_sku": "AB0011",
+    "prezzo_listino": 193.48,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000025"
+  },
+  "AB0012": {
+    "nome_prodotto": "Gonna Midi",
+    "codice_sku": "AB0012",
+    "prezzo_listino": 88.93,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000026"
+  },
+  "AB0013": {
+    "nome_prodotto": "Costume da Bagno",
+    "codice_sku": "AB0013",
+    "prezzo_listino": 116.35,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": null
+  },
+  "AB0014": {
+    "nome_prodotto": "Cintura in Pelle",
+    "codice_sku": "AB0014",
+    "prezzo_listino": 64.85,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-02-15",
+    "codice_ean": "801000000028"
+  },
+  "AB0015": {
+    "nome_prodotto": "Pigiama Invernale",
+    "codice_sku": "AB0015",
+    "prezzo_listino": 120.83,
+    "disponibile": false,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000029"
+  },
+  "CA0001": {
+    "nome_prodotto": "Set Pentole Antiaderenti",
+    "codice_sku": "CA0001",
+    "prezzo_listino": 270.85,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": null
+  },
+  "CA0002": {
+    "nome_prodotto": "Aspirapolvere Senza Fili",
+    "codice_sku": "CA0002",
+    "prezzo_listino": 66.02,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000031"
+  },
+  "CA0003": {
+    "nome_prodotto": "Lampadina LED Smart",
+    "codice_sku": "CA0003",
+    "prezzo_listino": 88.96,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000032"
+  },
+  "CA0004": {
+    "nome_prodotto": "Tagliaerba Elettrico",
+    "codice_sku": "CA0004",
+    "prezzo_listino": 197.7,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": null
+  },
+  "CA0005": {
+    "nome_prodotto": "Set Attrezzi da Giardino",
+    "codice_sku": "CA0005",
+    "prezzo_listino": 81.24,
+    "disponibile": false,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000034"
+  },
+  "CA0006": {
+    "nome_prodotto": "Zerbino in Cocco",
+    "codice_sku": "CA0006",
+    "prezzo_listino": 52.22,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000035"
+  },
+  "CA0007": {
+    "nome_prodotto": "Tenda Oscurante",
+    "codice_sku": "CA0007",
+    "prezzo_listino": 39.41,
+    "disponibile": true,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": null
+  },
+  "CA0008": {
+    "nome_prodotto": "Porta Ombrelli",
+    "codice_sku": "CA0008",
+    "prezzo_listino": 39.87,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000037"
+  },
+  "CA0009": {
+    "nome_prodotto": "Vaso in Ceramica",
+    "codice_sku": "CA0009",
+    "prezzo_listino": 14.03,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000038"
+  },
+  "CA0010": {
+    "nome_prodotto": "Kit Attrezzi Multiuso",
+    "codice_sku": "CA0010",
+    "prezzo_listino": 50.59,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": null
+  },
+  "CA0011": {
+    "nome_prodotto": "Umidificatore d'Aria",
+    "codice_sku": "CA0011",
+    "prezzo_listino": 5.93,
+    "disponibile": true,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000040"
+  },
+  "CA0012": {
+    "nome_prodotto": "Termometro Digitale da Interno",
+    "codice_sku": "CA0012",
+    "prezzo_listino": 142.14,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000041"
+  },
+  "CA0013": {
+    "nome_prodotto": "Cesto Portabiancheria",
+    "codice_sku": "CA0013",
+    "prezzo_listino": 294.96,
+    "disponibile": false,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": null
+  },
+  "CA0014": {
+    "nome_prodotto": "Portapapaya in Bambu'",
+    "codice_sku": "CA0014",
+    "prezzo_listino": 108.08,
+    "disponibile": true,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000043"
+  },
+  "CA0015": {
+    "nome_prodotto": "Innaffiatoio 10L",
+    "codice_sku": "CA0015",
+    "prezzo_listino": 257.19,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000044"
+  },
+  "SP0001": {
+    "nome_prodotto": "Pallone da Calcio Taglia 5",
+    "codice_sku": "SP0001",
+    "prezzo_listino": 193.51,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": null
+  },
+  "SP0002": {
+    "nome_prodotto": "Tappetino Yoga Antiscivolo",
+    "codice_sku": "SP0002",
+    "prezzo_listino": 92.31,
+    "disponibile": true,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000046"
+  },
+  "SP0003": {
+    "nome_prodotto": "Manubri Regolabili 20kg",
+    "codice_sku": "SP0003",
+    "prezzo_listino": 211.1,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000047"
+  },
+  "SP0004": {
+    "nome_prodotto": "Bicicletta City Bike",
+    "codice_sku": "SP0004",
+    "prezzo_listino": 20.03,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": null
+  },
+  "SP0005": {
+    "nome_prodotto": "Racchette da Padel",
+    "codice_sku": "SP0005",
+    "prezzo_listino": 86.77,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000049"
+  },
+  "SP0006": {
+    "nome_prodotto": "Zaino Trekking 40L",
+    "codice_sku": "SP0006",
+    "prezzo_listino": 184.77,
+    "disponibile": false,
+    "produttore": "Solaris",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000050"
+  },
+  "SP0007": {
+    "nome_prodotto": "Borraccia Termica 1L",
+    "codice_sku": "SP0007",
+    "prezzo_listino": 40.97,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": null
+  },
+  "SP0008": {
+    "nome_prodotto": "Corda per Saltare",
+    "codice_sku": "SP0008",
+    "prezzo_listino": 32.86,
+    "disponibile": false,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-02-15",
+    "codice_ean": "801000000052"
+  },
+  "SP0009": {
+    "nome_prodotto": "Guantoni da Boxe",
+    "codice_sku": "SP0009",
+    "prezzo_listino": 229.56,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000053"
+  },
+  "SP0010": {
+    "nome_prodotto": "Pallone da Basket",
+    "codice_sku": "SP0010",
+    "prezzo_listino": 161.04,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": null
+  },
+  "SP0011": {
+    "nome_prodotto": "Tenda da Campeggio 2 Posti",
+    "codice_sku": "SP0011",
+    "prezzo_listino": 254.38,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000055"
+  },
+  "SP0012": {
+    "nome_prodotto": "Occhiali da Sole Sportivi",
+    "codice_sku": "SP0012",
+    "prezzo_listino": 258.6,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000056"
+  },
+  "SP0013": {
+    "nome_prodotto": "Fascia Cardio Bluetooth",
+    "codice_sku": "SP0013",
+    "prezzo_listino": 17.65,
+    "disponibile": false,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": null
+  },
+  "SP0014": {
+    "nome_prodotto": "Pinne da Nuoto",
+    "codice_sku": "SP0014",
+    "prezzo_listino": 228.97,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000058"
+  },
+  "SP0015": {
+    "nome_prodotto": "Skateboard Completo",
+    "codice_sku": "SP0015",
+    "prezzo_listino": 155.26,
+    "disponibile": true,
+    "produttore": "Solaris",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000059"
+  },
+  "LI0001": {
+    "nome_prodotto": "Quaderno a Righe A4",
+    "codice_sku": "LI0001",
+    "prezzo_listino": 203.44,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": null
+  },
+  "LI0002": {
+    "nome_prodotto": "Penna Stilografica",
+    "codice_sku": "LI0002",
+    "prezzo_listino": 228.72,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000061"
+  },
+  "LI0003": {
+    "nome_prodotto": "Set Matite Colorate",
+    "codice_sku": "LI0003",
+    "prezzo_listino": 158.65,
+    "disponibile": true,
+    "produttore": "Solaris",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000062"
+  },
+  "LI0004": {
+    "nome_prodotto": "Evidenziatori Pack 6",
+    "codice_sku": "LI0004",
+    "prezzo_listino": 268.67,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": null
+  },
+  "LI0005": {
+    "nome_prodotto": "Agenda Giornaliera",
+    "codice_sku": "LI0005",
+    "prezzo_listino": 198.02,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000064"
+  },
+  "LI0006": {
+    "nome_prodotto": "Astuccio Portapenne",
+    "codice_sku": "LI0006",
+    "prezzo_listino": 116.9,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000065"
+  },
+  "LI0007": {
+    "nome_prodotto": "Romanzo Tascabile",
+    "codice_sku": "LI0007",
+    "prezzo_listino": 211.2,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": null
+  },
+  "LI0008": {
+    "nome_prodotto": "Atlante Geografico",
+    "codice_sku": "LI0008",
+    "prezzo_listino": 109.07,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": "801000000067"
+  },
+  "LI0009": {
+    "nome_prodotto": "Dizionario Italiano-Inglese",
+    "codice_sku": "LI0009",
+    "prezzo_listino": 60.12,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000068"
+  },
+  "LI0010": {
+    "nome_prodotto": "Raccoglitore ad Anelli",
+    "codice_sku": "LI0010",
+    "prezzo_listino": 41.75,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": null
+  },
+  "LI0011": {
+    "nome_prodotto": "Calcolatrice Scientifica",
+    "codice_sku": "LI0011",
+    "prezzo_listino": 143.59,
+    "disponibile": false,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000070"
+  },
+  "LI0012": {
+    "nome_prodotto": "Righello 30cm",
+    "codice_sku": "LI0012",
+    "prezzo_listino": 118.88,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000071"
+  },
+  "LI0013": {
+    "nome_prodotto": "Post-it Colorati",
+    "codice_sku": "LI0013",
+    "prezzo_listino": 51.37,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": null
+  },
+  "LI0014": {
+    "nome_prodotto": "Cartellina Porta Documenti",
+    "codice_sku": "LI0014",
+    "prezzo_listino": 273.9,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000073"
+  },
+  "LI0015": {
+    "nome_prodotto": "Libro di Cucina Illustrato",
+    "codice_sku": "LI0015",
+    "prezzo_listino": 143.4,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000074"
+  },
+  "GI0001": {
+    "nome_prodotto": "Set Costruzioni 500 pezzi",
+    "codice_sku": "GI0001",
+    "prezzo_listino": 161.3,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": null
+  },
+  "GI0002": {
+    "nome_prodotto": "Peluche Orso Grande",
+    "codice_sku": "GI0002",
+    "prezzo_listino": 169.61,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000076"
+  },
+  "GI0003": {
+    "nome_prodotto": "Puzzle 1000 Pezzi",
+    "codice_sku": "GI0003",
+    "prezzo_listino": 10.29,
+    "disponibile": true,
+    "produttore": "Casalinga Srl",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": "801000000077"
+  },
+  "GI0004": {
+    "nome_prodotto": "Bambola con Accessori",
+    "codice_sku": "GI0004",
+    "prezzo_listino": 13.56,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": null
+  },
+  "GI0005": {
+    "nome_prodotto": "Auto Radiocomandata",
+    "codice_sku": "GI0005",
+    "prezzo_listino": 78.88,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000079"
+  },
+  "GI0006": {
+    "nome_prodotto": "Gioco da Tavolo Famiglia",
+    "codice_sku": "GI0006",
+    "prezzo_listino": 233.44,
+    "disponibile": false,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000080"
+  },
+  "GI0007": {
+    "nome_prodotto": "Trenino in Legno",
+    "codice_sku": "GI0007",
+    "prezzo_listino": 120.85,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": null
+  },
+  "GI0008": {
+    "nome_prodotto": "Set Pongo Colorato",
+    "codice_sku": "GI0008",
+    "prezzo_listino": 254.85,
+    "disponibile": true,
+    "produttore": "Domusline",
+    "ultima_modifica_interna": "2026-09-15",
+    "codice_ean": "801000000082"
+  },
+  "GI0009": {
+    "nome_prodotto": "Palla Sensoriale Neonato",
+    "codice_sku": "GI0009",
+    "prezzo_listino": 76.27,
+    "disponibile": true,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000083"
+  },
+  "GI0010": {
+    "nome_prodotto": "Passeggino Leggero",
+    "codice_sku": "GI0010",
+    "prezzo_listino": 277.15,
+    "disponibile": false,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-02-15",
+    "codice_ean": null
+  },
+  "GI0011": {
+    "nome_prodotto": "Seggiolone da Tavolo",
+    "codice_sku": "GI0011",
+    "prezzo_listino": 201.73,
+    "disponibile": false,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000085"
+  },
+  "GI0012": {
+    "nome_prodotto": "Dondolo da Giardino",
+    "codice_sku": "GI0012",
+    "prezzo_listino": 133.73,
+    "disponibile": true,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000086"
+  },
+  "GI0013": {
+    "nome_prodotto": "Kit Scienza per Bambini",
+    "codice_sku": "GI0013",
+    "prezzo_listino": 141.65,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": null
+  },
+  "GI0014": {
+    "nome_prodotto": "Monopattino per Bambini",
+    "codice_sku": "GI0014",
+    "prezzo_listino": 268.33,
+    "disponibile": true,
+    "produttore": "Nordex",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000088"
+  },
+  "GI0015": {
+    "nome_prodotto": "Libro Sonoro Interattivo",
+    "codice_sku": "GI0015",
+    "prezzo_listino": 126.83,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": "801000000089"
+  },
+  "AL0001": {
+    "nome_prodotto": "Caffe' Macinato 1kg",
+    "codice_sku": "AL0001",
+    "prezzo_listino": 247.28,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": null
+  },
+  "AL0002": {
+    "nome_prodotto": "Olio Extravergine 1L",
+    "codice_sku": "AL0002",
+    "prezzo_listino": 117.75,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000091"
+  },
+  "AL0003": {
+    "nome_prodotto": "Pasta di Semola 500g",
+    "codice_sku": "AL0003",
+    "prezzo_listino": 127.76,
+    "disponibile": true,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-02-15",
+    "codice_ean": "801000000092"
+  },
+  "AL0004": {
+    "nome_prodotto": "Miele Millefiori 500g",
+    "codice_sku": "AL0004",
+    "prezzo_listino": 28.83,
+    "disponibile": true,
+    "produttore": "Solaris",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": null
+  },
+  "AL0005": {
+    "nome_prodotto": "Te' Verde Biologico",
+    "codice_sku": "AL0005",
+    "prezzo_listino": 217.18,
+    "disponibile": true,
+    "produttore": "Bluepoint",
+    "ultima_modifica_interna": "2026-01-15",
+    "codice_ean": "801000000094"
+  },
+  "AL0006": {
+    "nome_prodotto": "Cioccolato Fondente 70%",
+    "codice_sku": "AL0006",
+    "prezzo_listino": 140.71,
+    "disponibile": true,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": "801000000095"
+  },
+  "AL0007": {
+    "nome_prodotto": "Riso Carnaroli 1kg",
+    "codice_sku": "AL0007",
+    "prezzo_listino": 257.68,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-06-15",
+    "codice_ean": null
+  },
+  "AL0008": {
+    "nome_prodotto": "Passata di Pomodoro 700g",
+    "codice_sku": "AL0008",
+    "prezzo_listino": 151.61,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000097"
+  },
+  "AL0009": {
+    "nome_prodotto": "Biscotti Integrali",
+    "codice_sku": "AL0009",
+    "prezzo_listino": 62.04,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000098"
+  },
+  "AL0010": {
+    "nome_prodotto": "Acqua Minerale Naturale 6x1.5L",
+    "codice_sku": "AL0010",
+    "prezzo_listino": 298.98,
+    "disponibile": true,
+    "produttore": "CartaViva",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": null
+  },
+  "AL0011": {
+    "nome_prodotto": "Succo di Frutta ACE",
+    "codice_sku": "AL0011",
+    "prezzo_listino": 192.34,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-08-15",
+    "codice_ean": "801000000100"
+  },
+  "AL0012": {
+    "nome_prodotto": "Marmellata di Albicocche",
+    "codice_sku": "AL0012",
+    "prezzo_listino": 12.44,
+    "disponibile": false,
+    "produttore": "Vertex",
+    "ultima_modifica_interna": "2026-03-15",
+    "codice_ean": "801000000101"
+  },
+  "AL0013": {
+    "nome_prodotto": "Taralli Pugliesi 500g",
+    "codice_sku": "AL0013",
+    "prezzo_listino": 24.68,
+    "disponibile": true,
+    "produttore": "GustoItalia",
+    "ultima_modifica_interna": "2026-04-15",
+    "codice_ean": null
+  },
+  "AL0014": {
+    "nome_prodotto": "Aceto Balsamico di Modena",
+    "codice_sku": "AL0014",
+    "prezzo_listino": 279.59,
+    "disponibile": true,
+    "produttore": "Sportica",
+    "ultima_modifica_interna": "2026-05-15",
+    "codice_ean": "801000000103"
+  },
+  "AL0015": {
+    "nome_prodotto": "Farina Tipo 00 1kg",
+    "codice_sku": "AL0015",
+    "prezzo_listino": 216.43,
+    "disponibile": true,
+    "produttore": "PiccoliPassi",
+    "ultima_modifica_interna": "2026-07-15",
+    "codice_ean": "801000000104"
+  },
+  "ZZ0001": {
+    "nome_prodotto": "Prodotto Fornitore Dismesso",
+    "codice_sku": "ZZ0001",
+    "prezzo_listino": 12.5,
+    "disponibile": false,
+    "produttore": "Fornitore Sconosciuto",
+    "codice_ean": null,
+    "ultima_modifica_interna": "2019-01-01"
+  },
+  "PROMO-OMAGGIO": {
+    "nome_prodotto": "Prodotto Omaggio Catalogo",
+    "codice_sku": "PROMO-OMAGGIO",
+    "prezzo_listino": 0,
+    "disponibile": true,
+    "produttore": "Interno",
+    "codice_ean": null,
+    "ultima_modifica_interna": "2026-01-01"
+  }
+}

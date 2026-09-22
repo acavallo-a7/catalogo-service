@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: catalogo-service
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/catalogo_db}
+    username: ${DB_USERNAME:catalogo}
+    password: ${DB_PASSWORD:catalogo}
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      # Lo schema e' di Flyway: Hibernate non deve toccarlo, al massimo validarlo.
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: ${SERVER_PORT:8080}
+  error:
+    include-message: never
+
+catalogo:
+  importer:
+    base-url: ${IMPORTER_BASE_URL:https://raw.githubusercontent.com}
+    path: ${IMPORTER_PATH:/acavallo-a7/catalogo-prodotti-json/main/dati/catalogo_prodotti.json}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    it.its.catalogoservice: INFO
+
+---
+# Profilo usato dal container: il database e' l'altro servizio del compose.
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+  datasource:
+    url: jdbc:postgresql://postgres-catalogo:5432/catalogo_db
+    username: catalogo
+    password: catalogo

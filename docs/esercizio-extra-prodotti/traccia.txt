@@ -1,0 +1,167 @@
+Realizzare un microservizio Spring Boot (Java 21) che importi un catalogo prodotti da
+un file JSON esterno e lo esponga attraverso propri endpoint REST.
+
+Sorgente dati: file JSON generato per questo esercizio, disponibile in
+dati/catalogo_prodotti.json in questa stessa cartella. Il file va caricato su un
+repository GitHub pubblico (proprio, dello studente) e consumato dal microservizio
+tramite il suo URL raw, esattamente come nell'esercizio continenti/nazioni consuma
+countries.json da GitHub.
+
+
+Requisiti funzionali
+====================
+
+Persistenza: PostgreSQL containerizzato in Docker, migrazioni gestite con Flyway.
+
+  - Creare una tabella "categorie" e inserire i dati di default con un file SQL
+    (le 7 categorie note, vedi tabella sotto)
+  - Creare una tabella "prodotti" in relazione con categorie e salvare i dati del
+    JSON nella tabella prodotti
+
+La categoria NON e' presente nel JSON, ma e' ricavabile leggendo il campo
+codice_sku: le prime due lettere (prima delle cifre) individuano la categoria
+secondo questa tabella:
+
+  prefisso │           categoria            │
+  ─────────┼─────────────────────────────────┤
+  EL       │ Elettronica                    │
+  AB       │ Abbigliamento                  │
+  CA       │ Casa e Giardino                │
+  SP       │ Sport e Tempo Libero            │
+  LI       │ Libri e Cancelleria             │
+  GI       │ Giocattoli e Prima Infanzia      │
+  AL       │ Alimentari e Bevande            │
+  ─────────┴─────────────────────────────────┘
+
+Ci sono prodotti con codice_sku che NON rispetta il pattern "prefisso noto + cifre"
+(quindi senza categoria ricavabile): vanno esclusi dall'importazione, tranne il
+prodotto con codice_sku "PROMO-OMAGGIO", che va sempre inserito di default nella
+categoria "Non Categorizzato" (categoria da creare anch'essa nei dati di default,
+senza prefisso associato — e' l'equivalente dell'Italia nell'esercizio continenti).
+
+La tabella categorie avra' nome e prefisso (nullable per "Non Categorizzato").
+La tabella prodotti avra':
+  - nome, da nome_prodotto
+  - sku (univoco), da codice_sku
+  - prezzo, da prezzo_listino
+  - disponibile, da disponibile
+  - produttore, da produttore
+  - ean, da codice_ean (campo opzionale, puo' essere assente o null)
+
+
+Web:
+  - Inserire un endpoint per lanciare l'importer del JSON
+  - Inserire un endpoint che restituisca tutte le categorie
+  - Inserire un endpoint che restituisca la categoria richiesta
+  - Inserire un endpoint che restituisca tutti i prodotti, con tutti i dati e con
+    il nome della categoria
+  - Inserire un endpoint che restituisca il prodotto richiesto
+  - Inserire un endpoint che ritorni i prodotti di una categoria
+
+NON OBBLIGATORI
+  - Inserire un endpoint di modifica di categoria e prodotto
+  - Inserire un endpoint di cancellazione di categoria e prodotto
+  - Inserire un endpoint di inserimento manuale di categoria e prodotto
+
+Inserire la validazione dei dati di input.
+Gestire in modo centralizzato con @RestControllerAdvice gli errori specifici di
+notfound, badrequest, conflitto e di validazione.
+
+Fare i controlli di idempotenza: se l'importer viene lanciato due volte non deve
+inserire nuovi dati.
+
+L'importer deve tornare l'informazione di quanti prodotti sono stati inseriti,
+scartati perche' sku non valorizzato/non mappabile a nessuna categoria nota, e
+quanti gia' presenti.
+
+
+Requisiti non funzionali
+=========================
+
+OpenAPI: generare documentazione con springdoc-openapi ed esporre Swagger UI.
+
+Containerizzazione: creare la configurazione Docker per creare immagine e container.
+
+Versionamento: condividere il progetto su un repository GitHub (separato da quello
+che ospita il file catalogo_prodotti.json, oppure lo stesso — a scelta).
+
+
+Flusso di lavoro consigliato
+==============================
+
+Lettura del JSON con un client OpenFeign o RestClient.
+Esposizione con Controller REST degli endpoint.
+Repository Spring Data JPA per la persistenza Postgres.
+OpenAPI: generare specifica con springdoc-openapi; documentare campi, errori
+(400, 404, ecc.) e parametri path/query.
+Dockerfile, .dockerignore e docker-compose.yml che producano un'immagine eseguibile.
+Versionamento su GitHub.
+
+
+OSSERVAZIONI
+=============
+I DATI DI PARTENZA
+-------------------------------------------------------------------------------
+
+La sorgente e' un unico file JSON, 108 voci. Ogni voce descrive un prodotto con i
+suoi dati commerciali:
+
+    "EL0001": {
+      "nome_prodotto": "Smartphone 6.5\" 128GB",
+      "codice_sku": "EL0001",
+      "prezzo_listino": 187.42,
+      "disponibile": true,
+      "produttore": "Nordex",
+      "ultima_modifica_interna": "2026-03-15",
+      "codice_ean": "801000000000"
+    }
+
+  >> TRAPPOLA (identica, di proposito, a quella dell'esercizio continenti/nazioni)
+     La radice del JSON NON e' un array: e' un OGGETTO, e ogni chiave e' il
+     codice_sku del prodotto.
+
+         Map<String, ProdottoJson>    <- corretto
+         List<ProdottoJson>           <- non deserializza
+
+     Con RestClient il tipo generico va dichiarato con ParameterizedTypeReference:
+
+         var tipo = new ParameterizedTypeReference<Map<String, ProdottoJson>>() {};
+         Map<String, ProdottoJson> prodotti = restClient.get()
+                 .uri(url)
+                 .retrieve()
+                 .body(tipo);
+
+     Con OpenFeign basta il tipo di ritorno del metodo:
+
+         @FeignClient(name = "catalogo-prodotti", url = "${catalogo.url}")
+         public interface CatalogoProdottiClient {
+             @GetMapping("/dati/catalogo_prodotti.json")
+             Map<String, ProdottoJson> scarica();
+         }
+
+  >> SECONDA TRAPPOLA
+     Il JSON contiene un campo, "ultima_modifica_interna", che NON va mappato nel
+     DTO (e' un dettaglio del sistema sorgente, irrilevante per il nostro dominio).
+     Se il DTO di confine non ha @JsonIgnoreProperties(ignoreUnknown = true), la
+     deserializzazione fallisce non appena Jackson incontra quel campo:
+
+         @JsonIgnoreProperties(ignoreUnknown = true)
+         public record ProdottoJson(
+                 @JsonProperty("nome_prodotto")   String nome,
+                 @JsonProperty("codice_sku")      String sku,
+                 @JsonProperty("prezzo_listino")  java.math.BigDecimal prezzo,
+                 @JsonProperty("disponibile")     Boolean disponibile,
+                 @JsonProperty("produttore")      String produttore,
+                 @JsonProperty("codice_ean")      String ean) { }
+
+     Nota: codice_ean e' presente ma null su circa un terzo delle voci — il campo
+     nel DTO e nell'entity JPA deve essere nullable, non NOT NULL.
+
+  >> TERZA TRAPPOLA (idempotenza + eccezione)
+     Nel file sono presenti due prodotti con sku non mappabile a nessun prefisso
+     noto ("ZZ0001", "9999"): vanno scartati. Il prodotto "PROMO-OMAGGIO" ha anch'esso
+     uno sku fuori pattern, ma va inserito comunque, di default, nella categoria
+     "Non Categorizzato" — analogo esatto del caso Italia nell'esercizio
+     continenti/nazioni. Se l'importer gira due volte, "PROMO-OMAGGIO" non deve
+     duplicarsi: il controllo di idempotenza vale anche per l'eccezione, non solo
+     per il flusso normale.

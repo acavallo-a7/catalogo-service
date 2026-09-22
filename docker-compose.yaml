@@ -1,0 +1,34 @@
+services:
+
+  postgres-catalogo:
+    image: postgres:16-alpine
+    container_name: postgres-catalogo
+    environment:
+      POSTGRES_DB: catalogo_db
+      POSTGRES_USER: catalogo
+      POSTGRES_PASSWORD: catalogo
+    ports:
+      # Porte host fuori dal range usato da altri progetti gia' in esecuzione.
+      - "5432:5432"
+    volumes:
+      - catalogo-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U catalogo -d catalogo_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  catalogo-service:
+    build: .
+    image: catalogo-service:1.0.0
+    container_name: catalogo-service
+    depends_on:
+      postgres-catalogo:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+
+volumes:
+  catalogo-data:
